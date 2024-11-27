@@ -14,18 +14,18 @@ bot = commands.Bot(command_prefix="proto ", intents=intents)
 
 @bot.event
 async def on_ready():
-    print("replace this with whatever u want it to say in console when bot is online")
+    print("hi im online lol")
 @bot.event
 async def on_member_join(member: discord.Member):
     member.create_dm()
-    member.dm_channel.send("Welcome to the server :D")
+    member.dm_channel.send("welcome to the server :D \n hope you'll have fun! \n \n Link is here if you want to join again ^^ \n https://discord.gg/bspWs6v59G")
 
 @bot.command()
-async def test1(ctx):
-    ctx.send("This is a test!")
+async def yt(ctx):
+    ctx.send("BZZRT- here you go! ^^ \n https://www.youtube.com/channel/UCZsVjiMSN9Y2s3gFnMNwxqg")
 
 @bot.command()
-async def test2(ctx):
-    embed = discord.Embed(title="This is a test embed!", colour="blurple").add_field(name="Field 1", value="Field 2 (NOT IN LINE)", inline=False)
+async def help(ctx):
+    embed = discord.Embed(title="proto help", colour="blurple").add_field(name="Field 1", value="Field 2 (NOT IN LINE)", inline=False)
 
 bot.run(os.getenv("BOT_TOKEN"))
